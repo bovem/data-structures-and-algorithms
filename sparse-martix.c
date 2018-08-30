@@ -5,10 +5,10 @@ void main() {
     int m,n,i,j,index=0;
 
     struct nonzero {
-        int row[m];
-        int column[n];
-        int element[m*n];
-    } nonzero;
+        int row;
+        int column;
+        int element;
+    } nonzero[100]; //list of nonzero element as structure
 
     printf("\nPROGRAM FOR SPARSE MATRIX AND RETURING NON ZERO ELEMENTS WITH POSITIONS\n");
     printf("Enter number of row in matrix:");
@@ -16,37 +16,41 @@ void main() {
     printf("\nEnter number of columns in matrix:");
     scanf("%d",&n);
 
-    int arr [m][n];
+    int sparse[m][n]; //sparse matrix
 
     //clrscr();
+    // pushing elements
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
             printf("Enter element at [%d][%d]:",i,j);
-            scanf("%d",&arr[i][j]);
+            scanf("%d",&sparse[i][j]);
         }
     }
 
+    //displaying matrix
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
-            printf("%d\t",arr[i][j]);
+            printf("%d\t",sparse[i][j]);
         }
         printf("\n");
     }
 
+    //finding non zero elements
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
-            if (arr[i][j] != 0){
-                nonzero.row[index] = i;
-                nonzero.column[index] = j;
-                nonzero.element[index] = arr[i][j];
-                index += 1;
+            if (sparse[i][j] != 0){
+                nonzero[index].row = i;
+                nonzero[index].column = j;
+                nonzero[index].element = sparse[i][j];
+                index++;
             }   
         }
     }
 
+    // displaying non zero elements alongwith their location
     for (i=0;i<index;i++){
-        printf("Element %d at [%d][%d]\n",nonzero.element[i],
-                nonzero.row[i],nonzero.column[i]);
+        printf("Element %d at [%d][%d]\n",nonzero[i].element,
+                nonzero[i].row,nonzero[i].column);
     } 
     //getch();
 
