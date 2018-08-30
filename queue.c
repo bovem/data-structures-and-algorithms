@@ -20,7 +20,7 @@ void main() {
         switch(opt){
             case (1):
                 
-                for(i=0;i<=rear;i++){
+                for(i=front;i<=rear;i++){
                     printf("%d,",queue[i]);
                 }
                 break;
