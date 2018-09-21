@@ -14,18 +14,29 @@ A stack has a *top* and *last*.
 
 ### Insertion into Stack
 At the beginning the top and last are -1 (not 0 because if last is 0 then there must be an element at 0th index). As soon as first element is inserted into stack the top and last shifts from -1 to 0, as second element is inserted the top shifts to 1, then at next push top shifts to 2 and so on.  
+### Algorithms for Pushing to Stack
+```
+if sizeofstack - 1 = top   
+    Stack Overflow      
+endif 
+
+top = top + 1            
+stack[top] = item        
+Element pushed           
+```      
 
 ### Deletion from Stack  
 Assuming we have a stack with 5 elements(last=0 and top=4). If we remove an element, the first element from top will be popped and top will be shifted to 3, and at next deletion top will be shifted to 2. When there are no more elements to pop, top and last are resetted to -1.  
 
-### Algorithms for Pushing and Popping from Stack  
-```if sizeofstack - 1 == top   
-         Stack Overflow      
-   endif                     
-   top = top + 1            
-   stack[top] = item        
-   Element pushed           ```    
+### Algorithms for Popping from Stack  
+```
+if top = -1 
+    Stack Underflow      
+endif 
 
+item = stack[top]
+top = top - 1                    
+```      
 
 **USES**: In Recursive functions  
 
