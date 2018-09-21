@@ -14,6 +14,7 @@ A stack has a **top** and **last**.
 
 ### Insertion into Stack
 At the beginning the top and last are -1 (not 0 because if last is 0 then there must be an element at 0th index). As soon as first element is inserted into stack the top and last shifts from -1 to 0, as second element is inserted the top shifts to 1, then at next push top shifts to 2 and so on.  
+
 ### Algorithm for Pushing to Stack
 ```
 if sizeofstack - 1 = top   
@@ -53,9 +54,11 @@ Front and rear -1 while queue is empty. As the first element is inserted into th
 if rear = sizeofqueue - 1
     Queue Full
 end if
+
 if front = -1
     front = 0 
 endif
+
 rear = rear + 1
 queue[rear] = item
 ```  
@@ -68,17 +71,33 @@ In queue, the deletion stats from front, assuming we have a queue with 5 element
 if front = -1
     Queue Full
 end if
+
 if front = rear
     front = rear = -1
 endif
+
 else
     item = queue[front]
     front = front + 1
 ```  
 
-**USES**: In 
+**USES**: In I/O buffer
 
 ## List  
 List is a similar data type to Array but it can store different kinds(types) of data rather than storing single kind of data. A list can have string, char, int and float in it at the same time.  
 
 ## Linked List  
+Linked List stores data in the form of nodes. A node has data and pointer to next node. It can be useful in situations where we have to dynamically allocate storage to data (allocate only when we get data). A linked list can store only one kind of data (not like list).
+
+### Implementation of Linked List using Structures
+```
+struct node {
+    int value;
+    struct *node;
+    }
+```  
+
+### Inserting into Linked List
+### Algorithm for inserting into Linked List
+### Deleting from Linked List
+### Algorithm for deleting from Linked List
