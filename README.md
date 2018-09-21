@@ -10,11 +10,11 @@ This is an array with space for 5 elements and it can only store data of integer
 ## Stack  
 Stack is an abstract data type based on First In Last Out i.e. the first element to be pushed to the stack will be the last to be popped. Like in a book stack, in order to get to the book at the bottom, you have to remove the books at the top.
 
-A stack has a *top* and *last*. 
+A stack has a **top** and **last**. 
 
 ### Insertion into Stack
 At the beginning the top and last are -1 (not 0 because if last is 0 then there must be an element at 0th index). As soon as first element is inserted into stack the top and last shifts from -1 to 0, as second element is inserted the top shifts to 1, then at next push top shifts to 2 and so on.  
-### Algorithms for Pushing to Stack
+### Algorithm for Pushing to Stack
 ```
 if sizeofstack - 1 = top   
     Stack Overflow      
@@ -28,7 +28,7 @@ Element pushed
 ### Deletion from Stack  
 Assuming we have a stack with 5 elements(last=0 and top=4). If we remove an element, the first element from top will be popped and top will be shifted to 3, and at next deletion top will be shifted to 2. When there are no more elements to pop, top and last are resetted to -1.  
 
-### Algorithms for Popping from Stack  
+### Algorithm for Popping from Stack  
 ```
 if top = -1 
     Stack Underflow      
@@ -43,9 +43,9 @@ top = top - 1
 ## Queue  
 Queue is also an abstract data type based on First In First Out i.e. the first element to be pushed to the queue will be the first one to be pulled out. Like in queue, the first person to get  in line will be first to go out.  
 
-A queue has *front* and *rear*.
+A queue has **front** and **rear**.
 
-### Insertion into Queue  
+Insertion into Queue  
 Front is 0 and rear is -1 while queue is empty. As the first element is inserted into the queue the the front and rear are incremented to 0, as second element is pushed the rear is shifted to 1 and at next push rear is incremented to 2 and so on.
 
 ### Algorithm for Pushing in Queue
@@ -62,7 +62,7 @@ queue[rear] = item
 
 ### Deletion from Queue  
 In queue, the deletion stats from front, assuming we have a queue with 5 elements(front=0 and rear=4). At first pop the element at front is removed and front is moved to 1 and at next pop front is moved to 2 and so on. If queue reaches at front=4 and rear=4 and one more pop operation is done then front and rear are resetted to 0 and -1 respectively.  
- 
+
 **USES**: In 
 
 ## List  
