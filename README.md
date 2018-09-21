@@ -93,7 +93,7 @@ Linked List stores data in the form of nodes. A node has data and pointer to nex
 ```
 struct node {
     int value;
-    struct *node;
+    struct *node next;
     }
 ```  
 
