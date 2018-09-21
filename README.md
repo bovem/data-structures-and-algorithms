@@ -43,6 +43,26 @@ top = top - 1
 ## Queue  
 Queue is also an abstract data type based on First In First Out i.e. the first element to be pushed to the queue will be the first one to be pulled out. Like in queue, the first person to get  in line will be first to go out.  
 
+A queue has *front* and *rear*.
+
+### Insertion into Queue  
+Front is 0 and rear is -1 while queue is empty. As the first element is inserted into the queue the the front and rear are incremented to 0, as second element is pushed the rear is shifted to 1 and at next push rear is incremented to 2 and so on.
+
+### Algorithm for Pushing in Queue
+```
+if rear = sizeofqueue - 1
+    Queue Full
+end if
+if front = -1
+    front = 0 
+endif
+rear = rear + 1
+queue[rear] = item
+```  
+
+### Deletion from Queue  
+In queue, the deletion stats from front, assuming we have a queue with 5 elements(front=0 and rear=4). At first pop the element at front is removed and front is moved to 1 and at next pop front is moved to 2 and so on. If queue reaches at front=4 and rear=4 and one more pop operation is done then front and rear are resetted to 0 and -1 respectively.  
+ 
 **USES**: In 
 
 ## List  
