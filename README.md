@@ -19,12 +19,12 @@ At the beginning the top and last are -1 (not 0 because if last is 0 then there 
 Assuming we have a stack with 5 elements(last=0 and top=4). If we remove an element, the first element from top will be popped and top will be shifted to 3, and at next deletion top will be shifted to 2. When there are no more elements to pop, top and last are resetted to -1.  
 
 ### Algorithms for Pushing and Popping from Stack  
-```if sizeofstack - 1 == top```   
-```      Stack Overflow     ``` 
-```endif                    ``` 
-```top = top + 1            ```
-```stack[top] = item        ```
-```Element pushed           ```    
+```if sizeofstack - 1 == top   
+         Stack Overflow      
+   endif                     
+   top = top + 1            
+   stack[top] = item        
+   Element pushed           ```    
 
 
 **USES**: In Recursive functions  
